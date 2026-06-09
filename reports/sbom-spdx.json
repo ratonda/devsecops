@@ -1,0 +1,383 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "/app",
+  "documentNamespace": "http://trivy.dev/filesystem//app-e1c4148b-8422-45d4-b96f-40dcf5f8f0d3",
+  "creationInfo": {
+    "creators": [
+      "Organization: aquasecurity",
+      "Tool: trivy-0.71.0"
+    ],
+    "created": "2026-06-09T13:02:17Z"
+  },
+  "packages": [
+    {
+      "name": "requirements.txt",
+      "SPDXID": "SPDXRef-Application-243836e57ed785a5",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "primaryPackagePurpose": "APPLICATION",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "Class: lang-pkgs"
+        },
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "Type: pip"
+        }
+      ]
+    },
+    {
+      "name": "Flask",
+      "SPDXID": "SPDXRef-Package-3093334e406cf274",
+      "versionInfo": "2.0.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: requirements.txt",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/flask@2.0.1"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-30861"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2026-27205"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: pip"
+        }
+      ]
+    },
+    {
+      "name": "Jinja2",
+      "SPDXID": "SPDXRef-Package-935569f8f4c2110b",
+      "versionInfo": "3.0.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: requirements.txt",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/jinja2@3.0.1"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-22195"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-34064"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-56201"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-56326"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2025-27516"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: pip"
+        }
+      ]
+    },
+    {
+      "name": "Werkzeug",
+      "SPDXID": "SPDXRef-Package-21ee4c814be70f8f",
+      "versionInfo": "2.0.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: requirements.txt",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/werkzeug@2.0.1"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-25577"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-34069"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-46136"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-49766"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-49767"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2025-66221"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2026-21860"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2026-27199"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-23934"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: pip"
+        }
+      ]
+    },
+    {
+      "name": "cryptography",
+      "SPDXID": "SPDXRef-Package-28c2fa367507e066",
+      "versionInfo": "3.3.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: requirements.txt",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/cryptography@3.3.0"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2020-36242"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-0286"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-50782"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2026-26007"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-23931"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-49083"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-0727"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2026-34073"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://github.com/advisories/GHSA-5cpq-8wj7-hf2v"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://github.com/advisories/GHSA-jm77-qphf-c4w8"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://github.com/advisories/GHSA-v8gr-m533-ghj9"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: pip"
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "SPDXID": "SPDXRef-Package-af18f19f6db67fa3",
+      "versionInfo": "2.25.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: requirements.txt",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/requests@2.25.0"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2023-32681"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-35195"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2024-47081"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "https://avd.aquasec.com/nvd/cve-2026-25645"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: pip"
+        }
+      ]
+    },
+    {
+      "name": "/app",
+      "SPDXID": "SPDXRef-Filesystem-f25bc1759abfb44f",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "primaryPackagePurpose": "SOURCE",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.71.0",
+          "annotationDate": "2026-06-09T13:02:17Z",
+          "annotationType": "OTHER",
+          "comment": "SchemaVersion: 2"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Application-243836e57ed785a5",
+      "relatedSpdxElement": "SPDXRef-Package-21ee4c814be70f8f",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-Application-243836e57ed785a5",
+      "relatedSpdxElement": "SPDXRef-Package-28c2fa367507e066",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-Application-243836e57ed785a5",
+      "relatedSpdxElement": "SPDXRef-Package-3093334e406cf274",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-Application-243836e57ed785a5",
+      "relatedSpdxElement": "SPDXRef-Package-935569f8f4c2110b",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-Application-243836e57ed785a5",
+      "relatedSpdxElement": "SPDXRef-Package-af18f19f6db67fa3",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Filesystem-f25bc1759abfb44f",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-Filesystem-f25bc1759abfb44f",
+      "relatedSpdxElement": "SPDXRef-Application-243836e57ed785a5",
+      "relationshipType": "CONTAINS"
+    }
+  ]
+}

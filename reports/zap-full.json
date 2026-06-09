@@ -1,8 +1,8 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.17.0",
-	"@generated": "Tue, 9 Jun 2026 12:26:13",
-	"created": "2026-06-09T12:26:13.118831290Z",
+	"@generated": "Tue, 9 Jun 2026 13:00:55",
+	"created": "2026-06-09T13:00:55.810810945Z",
 	"insights":[
 		{
 			"level": "Info",
@@ -10,12 +10,12 @@
 			"site": "",
 			"key": "insight.network.failure",
 			"description": "Percentage of network failures",
-			"statistic": "4"
+			"statistic": "3"
 		},
 		{
 			"level": "Info",
 			"reason": "Informational",
-			"site": "http://host.docker.internal:5000",
+			"site": "http://172.17.0.1:5000",
 			"key": "insight.code.4xx",
 			"description": "Percentage of responses with status code 4xx",
 			"statistic": "100"
@@ -23,7 +23,7 @@
 		{
 			"level": "Info",
 			"reason": "Informational",
-			"site": "http://host.docker.internal:5000",
+			"site": "http://172.17.0.1:5000",
 			"key": "insight.endpoint.ctype.text/html",
 			"description": "Percentage of endpoints with content type text/html",
 			"statistic": "100"
@@ -31,7 +31,7 @@
 		{
 			"level": "Info",
 			"reason": "Informational",
-			"site": "http://host.docker.internal:5000",
+			"site": "http://172.17.0.1:5000",
 			"key": "insight.endpoint.method.GET",
 			"description": "Percentage of endpoints with method GET",
 			"statistic": "100"
@@ -39,48 +39,16 @@
 		{
 			"level": "Info",
 			"reason": "Informational",
-			"site": "http://host.docker.internal:5000",
+			"site": "http://172.17.0.1:5000",
 			"key": "insight.endpoint.total",
 			"description": "Count of total endpoints",
-			"statistic": "4"
-		},
-		{
-			"level": "Info",
-			"reason": "Informational",
-			"site": "http://host.docker.internal:5000",
-			"key": "insight.response.slow",
-			"description": "Percentage of slow responses",
-			"statistic": "1"
-		},
-		{
-			"level": "Info",
-			"reason": "Informational",
-			"site": "https://host.docker.internal:5000",
-			"key": "insight.endpoint.method.GET",
-			"description": "Percentage of endpoints with method GET",
-			"statistic": "100"
-		},
-		{
-			"level": "Info",
-			"reason": "Informational",
-			"site": "https://host.docker.internal:5000",
-			"key": "insight.endpoint.total",
-			"description": "Count of total endpoints",
-			"statistic": "1"
+			"statistic": "3"
 		}
 	],
 	"site":[ 
 		{
-			"@name": "https://host.docker.internal:5000",
-			"@host": "host.docker.internal",
-			"@port": "5000",
-			"@ssl": "true",
-			"alerts": [ 
-			]
-		},
-		{
-			"@name": "http://host.docker.internal:5000",
-			"@host": "host.docker.internal",
+			"@name": "http://172.17.0.1:5000",
+			"@host": "172.17.0.1",
 			"@port": "5000",
 			"@ssl": "false",
 			"alerts": [ 
@@ -95,29 +63,9 @@
 					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
 					"instances":[ 
 						{
-							"id": "6",
-							"uri": "http://host.docker.internal:5000/",
-							"nodeName": "http:\/\/host.docker.internal:5000\/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"id": "0",
-							"uri": "http://host.docker.internal:5000/login",
-							"nodeName": "http:\/\/host.docker.internal:5000\/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"id": "4",
-							"uri": "http://host.docker.internal:5000/robots.txt",
-							"nodeName": "http:\/\/host.docker.internal:5000\/robots.txt",
+							"uri": "http://172.17.0.1:5000/",
+							"nodeName": "http:\/\/172.17.0.1:5000\/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -126,8 +74,18 @@
 						},
 						{
 							"id": "5",
-							"uri": "http://host.docker.internal:5000/sitemap.xml",
-							"nodeName": "http:\/\/host.docker.internal:5000\/sitemap.xml",
+							"uri": "http://172.17.0.1:5000/robots.txt",
+							"nodeName": "http:\/\/172.17.0.1:5000\/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "6",
+							"uri": "http://172.17.0.1:5000/sitemap.xml",
+							"nodeName": "http:\/\/172.17.0.1:5000\/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -135,44 +93,14 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"systemic": false,
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "8"
-				},
-				{
-					"pluginid": "10106",
-					"alertRef": "10106",
-					"alert": "HTTP Only Site",
-					"name": "HTTP Only Site",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>The site is only served under HTTP and not HTTPS.</p>",
-					"instances":[ 
-						{
-							"id": "16",
-							"uri": "http://host.docker.internal:5000/",
-							"nodeName": "https:\/\/host.docker.internal:5000\/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Failed to connect.\nZAP attempted to connect via: https://host.docker.internal:5000/"
-						}
-					],
-					"count": "1",
-					"systemic": false,
-					"solution": "<p>Configure your web or application server to use SSL (https).</p>",
-					"otherinfo": "<p>Failed to connect.</p><p>ZAP attempted to connect via: https://host.docker.internal:5000/</p>",
-					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p><p>https://letsencrypt.org/</p>",
-					"cweid": "311",
-					"wascid": "4",
-					"sourceid": "102"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10063",
@@ -185,19 +113,9 @@
 					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
 					"instances":[ 
 						{
-							"id": "12",
-							"uri": "http://host.docker.internal:5000/",
-							"nodeName": "http:\/\/host.docker.internal:5000\/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"id": "3",
-							"uri": "http://host.docker.internal:5000/login",
-							"nodeName": "http:\/\/host.docker.internal:5000\/login",
+							"uri": "http://172.17.0.1:5000/",
+							"nodeName": "http:\/\/172.17.0.1:5000\/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -206,8 +124,8 @@
 						},
 						{
 							"id": "14",
-							"uri": "http://host.docker.internal:5000/robots.txt",
-							"nodeName": "http:\/\/host.docker.internal:5000\/robots.txt",
+							"uri": "http://172.17.0.1:5000/robots.txt",
+							"nodeName": "http:\/\/172.17.0.1:5000\/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -215,9 +133,9 @@
 							"otherinfo": ""
 						},
 						{
-							"id": "15",
-							"uri": "http://host.docker.internal:5000/sitemap.xml",
-							"nodeName": "http:\/\/host.docker.internal:5000\/sitemap.xml",
+							"id": "13",
+							"uri": "http://172.17.0.1:5000/sitemap.xml",
+							"nodeName": "http:\/\/172.17.0.1:5000\/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -225,14 +143,14 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"systemic": false,
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "8"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10036",
@@ -245,29 +163,9 @@
 					"desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>",
 					"instances":[ 
 						{
-							"id": "7",
-							"uri": "http://host.docker.internal:5000/",
-							"nodeName": "http:\/\/host.docker.internal:5000\/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Werkzeug/2.0.1 Python/3.11.15",
-							"otherinfo": ""
-						},
-						{
 							"id": "1",
-							"uri": "http://host.docker.internal:5000/login",
-							"nodeName": "http:\/\/host.docker.internal:5000\/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Werkzeug/2.0.1 Python/3.11.15",
-							"otherinfo": ""
-						},
-						{
-							"id": "9",
-							"uri": "http://host.docker.internal:5000/robots.txt",
-							"nodeName": "http:\/\/host.docker.internal:5000\/robots.txt",
+							"uri": "http://172.17.0.1:5000/",
+							"nodeName": "http:\/\/172.17.0.1:5000\/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -276,8 +174,18 @@
 						},
 						{
 							"id": "8",
-							"uri": "http://host.docker.internal:5000/sitemap.xml",
-							"nodeName": "http:\/\/host.docker.internal:5000\/sitemap.xml",
+							"uri": "http://172.17.0.1:5000/robots.txt",
+							"nodeName": "http:\/\/172.17.0.1:5000\/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Werkzeug/2.0.1 Python/3.11.15",
+							"otherinfo": ""
+						},
+						{
+							"id": "7",
+							"uri": "http://172.17.0.1:5000/sitemap.xml",
+							"nodeName": "http:\/\/172.17.0.1:5000\/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -285,14 +193,14 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"systemic": false,
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://httpd.apache.org/docs/current/mod/core.html#servertokens</p><p>https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)</p><p>https://www.troyhunt.com/shhh-dont-let-your-response-headers/</p>",
 					"cweid": "497",
 					"wascid": "13",
-					"sourceid": "8"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -305,9 +213,9 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
 					"instances":[ 
 						{
-							"id": "10",
-							"uri": "http://host.docker.internal:5000/",
-							"nodeName": "http:\/\/host.docker.internal:5000\/",
+							"id": "2",
+							"uri": "http://172.17.0.1:5000/",
+							"nodeName": "http:\/\/172.17.0.1:5000\/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -315,9 +223,9 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
-							"id": "2",
-							"uri": "http://host.docker.internal:5000/login",
-							"nodeName": "http:\/\/host.docker.internal:5000\/login",
+							"id": "10",
+							"uri": "http://172.17.0.1:5000/robots.txt",
+							"nodeName": "http:\/\/172.17.0.1:5000\/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -326,18 +234,8 @@
 						},
 						{
 							"id": "11",
-							"uri": "http://host.docker.internal:5000/robots.txt",
-							"nodeName": "http:\/\/host.docker.internal:5000\/robots.txt",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
-						},
-						{
-							"id": "13",
-							"uri": "http://host.docker.internal:5000/sitemap.xml",
-							"nodeName": "http:\/\/host.docker.internal:5000\/sitemap.xml",
+							"uri": "http://172.17.0.1:5000/sitemap.xml",
+							"nodeName": "http:\/\/172.17.0.1:5000\/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -345,14 +243,14 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"systemic": false,
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
 					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "8"
+					"sourceid": "1"
 				}
 			]
 		}
