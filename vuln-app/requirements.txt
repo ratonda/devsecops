@@ -1,0 +1,7 @@
+# requirements.txt — versions volontairement obsolètes
+Flask==2.0.1         # CVE-2023-30861
+Werkzeug==2.0.1      # CVE-2023-25577
+Jinja2==3.0.1        # CVE-2024-34064
+requests==2.25.0     # CVE-2023-32681
+cryptography==3.3.0  # CVE-2023-23931
+Pillow>=10.0.0

@@ -1,0 +1,28 @@
+rules:
+  - id: subprocess-shell-true
+    pattern: subprocess.$FUNC(..., shell=True, ...)
+    message: 'shell=True avec entrée utilisateur = RCE. Utiliser shell=False.'
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: CWE-78
+ 
+  - id: flask-template-injection
+    pattern: render_template_string(f'...')
+    message: 'f-string dans render_template_string = SSTI potentiel.'
+    severity: ERROR
+    languages: [python]
+ 
+  - id: unsafe-pickle-loads
+    patterns:
+      - pattern: pickle.loads($DATA)
+      - pattern-not: pickle.loads(b'...')
+    message: 'pickle.loads() avec donnée dynamique = RCE. Utiliser json.'
+    severity: ERROR
+    languages: [python]
+ 
+  - id: weak-hash-password
+    pattern: hashlib.md5($PWD.encode())
+    message: 'MD5 pour mots de passe est cassé. Utiliser bcrypt ou argon2.'
+    severity: WARNING
+    languages: [python]
