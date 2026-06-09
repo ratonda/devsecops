@@ -6,7 +6,7 @@ app = Flask(__name__)
  
 # FAILLE 1 — Hardcoded credentials (CWE-798)
 SECRET_KEY  = 'hardcoded_secret_123'
-DB_PASSWORD = 'admin'
+DB_PASSWORD = 'admin1242423423423'
 AWS_KEY     = 'AKIAIOSFODNN7EXAMPLE'
 
 # AJOUT : Point d'entrée pour que le scanner Docker trouve les autres failles
